@@ -1,0 +1,11 @@
+#set audio output
+#list outputs
+#pactl list short sinks
+alias set1='pacmd set-default-sink 1'
+alias set2='pacmd set-default-sink 5'
+alias set3='pacmd set-default-sink 6'
+alias set4='pacmd set-default-sink 7'
+
+#set volume
+function v { amixer -D pulse sset Master "$1"%; }
+export -f v
